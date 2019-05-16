@@ -25,14 +25,20 @@
             <ul class="nav flex-column">
               <li class="nav-item">
                 <a class="nav-link active" href="<?php echo base_url('admin/index');?>">
-                  <i class="material-icons">edit</i>
+                  <i class="material-icons">home</i>
+                  <span>DASHBOARD </span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="<?php echo base_url('admin/userlist');?>">
+                  <i class="material-icons">add</i>
                   <span>DAFTAR PENGGUNA</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link " href="<?php echo base_url('admin/blog')?>">
-                  <i class="material-icons">note_add</i>
-                  <span>Add New Post</span>
+                <a class="nav-link " href="<?php echo base_url('news/index')?>">
+                  <i class="material-icons">note</i>
+                  <span>POST</span>
                 </a>
               </li>
               <li class="nav-item">

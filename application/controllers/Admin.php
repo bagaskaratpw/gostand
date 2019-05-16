@@ -1,7 +1,8 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin extends CI_Controller {
+class Admin extends CI_Controller 
+{
 
 	public function __construct()
 	{
@@ -9,8 +10,7 @@ class Admin extends CI_Controller {
 		$this->load->model('Admin_model');
 	}
 	public function index(){
-		$this->load->view('admin/login');
-		//echo 'berhasil login';
+		$this->load->view('admin/dashboard');
 	}
 	public function userlist()
 	{
@@ -26,10 +26,6 @@ class Admin extends CI_Controller {
 		{
 			redirect(base_url('Login'));
 		}
-	}
-	public function blog()
-	{
-		$this->load->view('admin/add-new-post');
 	}
 	public function testimoni()
 	{

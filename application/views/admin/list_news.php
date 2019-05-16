@@ -36,59 +36,17 @@
 					<div class="header">
 					<div class="page-header row no-gutters py-4">
                     <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
-                        <span class="text-uppercase page-subtitle">User List</span>
-                        <h3 class="page-title">Add New User</h3>
+                        <h3 class="page-title">Add New Post</h3>
                     </div>
                     </div>
 						<h2>
-							<a href="#" data-toggle="modal" data-target="#addBanner" class="btn btn-primary">
+							<a href="<?php echo base_url('news/createNews');?>"  class="btn btn-primary">
 								<i class="material-icons">add</i>
-								<span>ADD ACCOUNT</span>
+								<span>ADD POST</span>
 							</a>
 						</h2>
 					</div>
 					<!-- Add Banner Modal -->
-					<div class="modal fade" id="addBanner">
-						<div class="modal-dialog">
-							<div class="modal-content">
-								
-								<div class="modal-header">
-									<h4 class="modal-title">ADD ACCOUNT</h4>
-								</div>
-								<div class="modal-body">
-								<?php echo form_open('admin/prosesregister', array('class' => 'form-horizontal', 'autocomplete' => 'off')); ?>
-									<div class="row clearfix">	
-											<div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-												<label>Name </label>
-											</div>
-											<div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-												<div class="form-group">
-													<div class="form-line">
-														<input type="text" name="username" class="form-control"  placeholder="Enter Username">
-													</div>
-												</div>
-											</div>
-											<div class="col-lg-2 col-md-2 col-sm-4 col-xs-5 form-control-label">
-												<label>Password </label>
-											</div>
-											<div class="col-lg-10 col-md-10 col-sm-8 col-xs-7">
-												<div class="form-group">
-													<div class="form-line">
-														<input type="password" name="password" class="form-control" placeholder="Password">
-													</div>
-												</div>
-											</div>
-									</div>
-										
-								</div>
-								<div class="modal-footer">
-									<button type="submit" class="btn btn-primary">Submit</button>
-									<button type="button" class="btn btn-danger waves-effect" data-dismiss="modal">CANCEL</button>
-								</div>
-								<?php echo form_close(); ?>
-							</div>
-						</div>
-					</div>
 					<!-- End Create Modal -->
 					<!-- end page header -->
 					<div class="row">
@@ -99,30 +57,16 @@
 										<table class="table table-bordered table-striped table-hover dataTable js-exportable">
 											<thead>
 												<tr>
-													<th style="text-align:center;" width="10">No</th>
-													<th>Nama</th>
-													<th style="text-align:center;" width="70">Action</th>
+                                                    <th width="10">No</th>
+                                                    <th>Title</th>                                    
+                                                    <th style="text-align:center;" width="100">Category</th>
+                                                    <th style="text-align:center;" width="150">Publish</th>                                    
+                                                    <th style="text-align:center;" width="150">Status</th>
+                                                    <th style="text-align:center;" width="150">Action</th>
 												</tr>
 											</thead>
 											<tbody>
-		 										<?php $no=1; foreach($data as $user) {?>
-		 										<tr>
-		 											
-													<td>
-														<?php echo $no++?>
-													</td>
-													<td>
-														<?php echo $user['account_name'];?>
-													</td>
-													<td>
-														<a href="<?php echo base_url('admin/delete_user/').$user['account_id'];?>">
-															<button type="button" class="mb-2 btn btn-sm btn-danger mr-1">
-																<i class="fa fa-trash" aria-hidden="true"></i>
-															</button> 
-														</a>
-													</td>
-												</tr>
-												 <?php }?>
+		 										
 											</tbody>
 										</table>
 									</div>
