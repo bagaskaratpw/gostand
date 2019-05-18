@@ -44,11 +44,11 @@
                 <div class="col-md-4 col-sm-6 single-team">
                     <div class="inner">
                         <div class="team-img">
-                            <img src="<?php echo base_url('asset/');?>images/team1.png" alt="">
+                            <img src="<?php echo base_url('asset/');?>images/bugi.jpg" alt="">
                         </div>
                         <div class="team-content">
-                            <h4>Jeffery Poole</h4>
-                            <span class="desg">UI/UX Designer</span>
+                            <h4>Bugi Setiawan</h4>
+                            <span class="desg">Backend developer</span>
                             <div class="team-social">
                                 <a class="fa fa-facebook" href="#"></a>
                                 <a class="fa fa-twitter" href="#"></a>
@@ -61,11 +61,11 @@
                 <div class="col-md-4 col-sm-6 single-team">
                     <div class="inner">
                         <div class="team-img">
-                            <img src="<?php echo base_url('asset/');?>images/team2.png" alt="">
+                            <img src="<?php echo base_url('asset/');?>images/ino.jpg" alt="">
                         </div>
                         <div class="team-content">
-                            <h4>Isabelle Dean</h4>
-                            <span class="desg">UI/UX Designer</span>
+                            <h4>Januario Tristano</h4>
+                            <span class="desg">Mobile Developer</span>
                             <div class="team-social">
                                 <a class="fa fa-facebook" href="#"></a>
                                 <a class="fa fa-twitter" href="#"></a>
@@ -78,11 +78,11 @@
                 <div class="col-md-4 col-sm-6 single-team">
                     <div class="inner">
                         <div class="team-img">
-                            <img src="<?php echo base_url('asset/');?>images/team3.png" alt="">
+                            <img src="<?php echo base_url('asset/');?>images/bagas.jpg" alt="">
                         </div>
                         <div class="team-content">
-                            <h4>Mike Kennedy</h4>
-                            <span class="desg">UI/UX Designer</span>
+                            <h4>Bagaskara Teguh</h4>
+                            <span class="desg">Backend Developer</span>
                             <div class="team-social">
                                 <a class="fa fa-facebook" href="#"></a>
                                 <a class="fa fa-twitter" href="#"></a>
@@ -95,11 +95,11 @@
                 <div class="col-md-4 col-sm-6 single-team">
                     <div class="inner">
                         <div class="team-img">
-                            <img src="<?php echo base_url('asset/');?>images/team4.png" alt="">
+                            <img src="<?php echo base_url('asset/');?>images/debby.jpg" alt="">
                         </div>
                         <div class="team-content">
-                            <h4>Edwin Gross</h4>
-                            <span class="desg">UI/UX Designer</span>
+                            <h4>Natalia Debby</h4>
+                            <span class="desg">Frontend Developer</span>
                             <div class="team-social">
                                 <a class="fa fa-facebook" href="#"></a>
                                 <a class="fa fa-twitter" href="#"></a>
@@ -112,11 +112,11 @@
                 <div class="col-md-4 col-sm-6 single-team">
                     <div class="inner">
                         <div class="team-img">
-                            <img src="<?php echo base_url('asset/');?>images/team5.png" alt="">
+                            <img src="<?php echo base_url('asset/');?>images/siki.jpg" alt="">
                         </div>
                         <div class="team-content">
-                            <h4>Mable Schwartz</h4>
-                            <span class="desg">UI/UX Designer</span>
+                            <h4>Rizkia Herliani</h4>
+                            <span class="desg">Frontend</span>
                             <div class="team-social">
                                 <a class="fa fa-facebook" href="#"></a>
                                 <a class="fa fa-twitter" href="#"></a>
@@ -129,10 +129,10 @@
                 <div class="col-md-4 col-sm-6 single-team">
                     <div class="inner">
                         <div class="team-img">
-                            <img src="<?php echo base_url('asset/');?>images/team6.png" alt="">
+                            <img src="<?php echo base_url('asset/');?>images/yefta.jpg" alt="">
                         </div>
                         <div class="team-content">
-                            <h4>Adele Washington</h4>
+                            <h4>Yefta Juntinus</h4>
                             <span class="desg">UI/UX Designer</span>
                             <div class="team-social">
                                 <a class="fa fa-facebook" href="#"></a>

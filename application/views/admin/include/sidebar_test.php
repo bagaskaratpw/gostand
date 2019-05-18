@@ -24,13 +24,13 @@
           <div class="nav-wrapper">
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link active" href="<?php echo base_url('admin/index');?>">
+                <a class="nav-link " href="<?php echo base_url('admin/index');?>">
                   <i class="material-icons">home</i>
                   <span>DASHBOARD </span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="<?php echo base_url('admin/userlist');?>">
+                <a class="nav-link" href="<?php echo base_url('admin/userlist');?>">
                   <i class="material-icons">add</i>
                   <span>DAFTAR PENGGUNA</span>
                 </a>
@@ -42,16 +42,12 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link " href="<?php echo base_url('admin/testimoni')?>">
+                <a class="nav-link active" href="<?php echo base_url('admin/faq')?>">
                   <i class="material-icons">star</i>
-                  <span>Testimoni</span>
+                  <span>FAQ</span>
                 </a>
               </li>
             </ul>
-            <a class="nav-link " href="<?php echo base_url('Login/logout')?>">
-                  <i class="material-icons">star</i>
-                  <span>Testimoni</span>
-                </a>
           </div>
         </aside>
         <!-- End Main Sidebar -->

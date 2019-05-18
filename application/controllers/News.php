@@ -7,7 +7,10 @@ class News extends CI_Controller
     {
         parent::__construct();
         $this->load->model('News_model');
-        	
+        if($this->session->userdata('status') != "ADMIN")
+		{
+			redirect(base_url('login'));
+		}
 	}
 
     // List News

@@ -8,28 +8,35 @@ class Admin extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('Admin_model');
+
+		if($this->session->userdata('status') != "ADMIN")
+		{
+			redirect(base_url('login'));
+		}
 	}
 	public function index(){
 		$this->load->view('admin/dashboard');
 	}
+	public function faq()
+	{
+		$dataquery = $this->Admin_model->get('faq');
+		$data = array(
+			'data' => $dataquery,
+		);
+		$this->load->view('admin/list_faq',$data);
+	}
+	public function add_faq()
+	{
+		$this->load->view('admin/add_faq');
+	}
 	public function userlist()
 	{
-		if($this->session->userdata('login')==TRUE && $this->session->userdata('status')=='ADMIN')
-		{
 			$dataquery = $this->Admin_model->account();
 			$data = array(
 				'data' => $dataquery,
 			);
 			$this->load->view('admin/index',$data);
-		}
-		else
-		{
-			redirect(base_url('Login'));
-		}
-	}
-	public function testimoni()
-	{
-		$this->load->view('admin/testimoni');
+		
 	}
 	public function prosesregister()
 	{
@@ -39,7 +46,17 @@ class Admin extends CI_Controller
 		);
 
 		$data = $this->Admin_model->Insert('account',$data);
-		redirect(base_url('admin/userlist'));
+		redirect(base_url('admin/index'));
+	}
+	public function prosesfaq()
+	{
+		$data = array (
+			'quetion' => $this->input->post('tanya'),
+			'answer' => $this->input->post('jawab'),
+		);
+
+		$data = $this->Admin_model->Insert('faq',$data);
+		redirect(base_url('admin/faq'));
 	}
 	public function delete_user($account_id)
 	{
@@ -48,7 +65,13 @@ class Admin extends CI_Controller
 		$this->Admin_model->Delete('account', $account_id);
 	    redirect('admin/userlist/');
 	}
+	public function delete_faq($id)
+	{
+		$id = array('id' => $id);
 
+		$this->Admin_model->Delete('faq',$id);
+		redirect('admin/faq');
+	}
 	
 	
 	

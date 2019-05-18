@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Kontak | GO STAND</title>
+    <title>FAQ | GO STAND</title>
     <?php $this->load->view('user/include/stylesheet'); ?>
 </head>
 <!--/head-->
@@ -13,14 +13,14 @@
 
 
     <div class="page-title" style="background-image: url(<?php echo base_url('asset/');?>images/page-title.png)">
-        <h1>KONTAK KAMI</h1>
+        <h1>FAQ</h1>
     </div>
 
     <section id="contact-page">
         <div class="container">
             <div class="large-title text-center">        
-                <h2>Tinggalkan Pesan Pada Kami</h2>
-                <p>Berikan Komentar Anda Untuk Kemajuan Aplikasi Kami. <br> Saran Anda Sangat Membantu Kami.</p>
+                <h2>Tanya Jawab</h2>
+                <p>Pertanyaan seputar GO-STAND</p>
             </div> 
             <div class="row contact-wrap"> 
                 <div class="status alert alert-success" style="display: none"></div>

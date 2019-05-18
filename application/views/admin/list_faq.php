@@ -11,7 +11,7 @@
 <body class="h-100">
 	<div class="container-fluid">
 		<div class="row">
-			<?php $this->load->view('admin/include/sidebar');?>
+			<?php $this->load->view('admin/include/sidebar_test');?>
 			<main class="main-content col-lg-10 col-md-9 col-sm-12 p-0 offset-lg-2 offset-md-3">
 				<div class="main-navbar sticky-top bg-white">
 					<!-- Main Navbar -->
@@ -32,29 +32,59 @@
 				</div>
 				<!-- / .main-navbar -->
 				<div class="main-content-container container-fluid px-4">
-                    <!-- Page Header -->
-                    <div class="page-header row no-gutters py-4">
+					<!-- page header -->
+					<div class="header">
+					<div class="page-header row no-gutters py-4">
                     <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
-                        <span class="text-uppercase page-subtitle">Testimonial</span>
-                        <h3 class="page-title">Testimonial List</h3>
+                        <h3 class="page-title">Add New FAQ</h3>
                     </div>
                     </div>
-                    <div class="row">
+						<h2>
+							<a href="<?php echo base_url('admin/add_faq');?>"  class="btn btn-primary">
+								<i class="material-icons">add</i>
+								<span>ADD FAQ</span>
+							</a>
+						</h2>
+					</div>
+					<!-- Add Banner Modal -->
+					<!-- End Create Modal -->
+					<!-- end page header -->
+					<div class="row">
 						<div class="col-lg-12 col-md-12">
 							<div class="card card-small mb-3">
 								<div class="card-body">
 									<div class="body">
 										<table class="table table-bordered table-striped table-hover dataTable js-exportable">
-											<thead>
+										<thead>
 												<tr>
 													<th style="text-align:center;" width="10">No</th>
-													<th>Nama</th>
-													<th style="text-align:center;" width="70">Action</th>
+													<th style="text-align:center;" width="10" >Quetion</th>
+													<th style="text-align:center;" witdh="40">Answer</th>
+													<th style="text-align:center;" width="10">Action</th>
 												</tr>
 											</thead>
 											<tbody>
-		 										
-		 										
+		 										<?php $no=1; foreach($data as $faq) {?>
+		 										<tr>
+		 											
+													<td>
+														<?php echo $no++?>
+													</td>
+													<td>
+														<?php echo $faq['quetion'];?>
+													</td>
+													<td>
+														<?php echo $faq['answer'];?>
+													</td>
+													<td>
+														<a href="<?php echo base_url('admin/delete_faq/').$faq['id'];?>">
+															<button type="button" class="mb-2 btn btn-sm btn-danger mr-1">
+																<i class="fa fa-trash" aria-hidden="true"></i>
+															</button> 
+														</a>
+													</td>
+												</tr>
+												 <?php }?>
 											</tbody>
 										</table>
 									</div>
@@ -88,8 +118,7 @@
 			</main>
 		</div>
 	</div>
-    </div>
-    
+	</div>
 	<?php $this->load->view('admin/include/js');?>
 </body>
 

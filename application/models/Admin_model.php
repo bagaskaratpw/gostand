@@ -12,6 +12,10 @@ class Admin_model extends CI_Model
   {
       return $this->db->get($table)->result_array();
   }
+  public function faq()
+  {
+    return $this->db->get('faq')->result_array();
+  }
   public function account()
   {
     return $this->db->get('account')->result_array();

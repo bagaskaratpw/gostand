@@ -11,7 +11,7 @@
 <body class="h-100">
 	<div class="container-fluid">
 		<div class="row">
-			<?php $this->load->view('admin/include/sidebar_news');?>
+			<?php $this->load->view('admin/include/sidebar_test');?>
 			<main class="main-content col-lg-10 col-md-9 col-sm-12 p-0 offset-lg-2 offset-md-3">
 				<div class="main-navbar sticky-top bg-white">
 					<!-- Main Navbar -->
@@ -35,8 +35,8 @@
 					<!-- Page Header -->
                     <div class="page-header row no-gutters py-4">
                     <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
-                        <span class="text-uppercase page-subtitle">Blog Posts</span>
-                        <h3 class="page-title">Add New Post</h3>
+                        <span class="text-uppercase page-subtitle">FAQ Posts</span>
+                        <h3 class="page-title">Add New FAQ</h3>
                     </div>
                     </div>
                     <!-- End Page Header -->
@@ -45,33 +45,18 @@
                             <!-- Add New Post Form -->
                             <div class="card card-small mb-3">
                                 <div class="card-body">
-								<?php echo form_open_multipart('news/creatingNews', array('class' => 'form-horizontal', 'autocomplete' => 'off')); ?>
+								<?php echo form_open_multipart('admin/prosesfaq', array('class' => 'form-horizontal', 'autocomplete' => 'off')); ?>
 									<div class="form-group">
 										<div class="form-line">
 											<?php 
-												$data = array('type' => 'text', 'class' => 'form-control','placeholder' => 'News Title', 'name' => 'title', 'id' => 'title', 'value' => set_value('title'), 'required' => 'true', 'autofocus' => 'true'); 
+												$data = array('type' => 'text', 'class' => 'form-control','placeholder' => 'Add Quetion', 'name' => 'tanya', 'id' => 'tanya', 'value' => set_value('title'), 'required' => 'true', 'autofocus' => 'true'); 
 												echo form_input($data);                                             
 											?>
 										</div>
 									</div>
 									<div class="form-group">
 										<div class="form-line">
-											<select name="category" class="form-control show-tick">
-												<option selected>Category</option>
-												<?php foreach ($category as $info) { ?>                                                                              
-													<option value="<?php echo $info['category_unique']; ?>"><?php echo $info['category_name']; ?></option>
-												<?php } ?>
-											</select>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="form-line">
-											<input type="file" name="thumbNews" id="thumbNews" onchange="readURL(this);" accept="image/*" >
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="form-line">
-											<textarea class="ckeditor" id="ckedtor"></textarea>
+                                            <textarea class="ckeditor" name ="jawab" id="ckedtor"></textarea>
 										</div>
 									</div>
                                     <?php echo form_submit('submit', 'CREATE', array('class' => 'btn btn-success m-t-10 waves-effect')); ?>

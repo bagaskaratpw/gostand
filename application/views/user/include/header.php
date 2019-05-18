@@ -16,7 +16,6 @@
                         <li><a href="<?php echo base_url('user/about');?>">Tentang</a></li>
                         <li><a href="<?php echo base_url('user/daftar_blog');?>">Blog</a></li>
                         <li><a href="<?php echo base_url('user/contact');?>">Kontak</a></li>
-                        <li><a href="<?php echo base_url('user/contact');?>">login</a></li>
                     </ul>
                 </div>
             </div>
