@@ -2,7 +2,11 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class User extends CI_Controller {
-
+	public function __construct()
+	{
+		parent::__construct();
+		$this->load->model('Admin_model');
+	}
 	public function index()
 	{
 		$this->load->view('user/depan');
@@ -13,7 +17,11 @@ class User extends CI_Controller {
 	}
 	public function contact ()
 	{
-		$this->load->view('user/contact');
+		$dataquery = $this->Admin_model->get('faq');
+		$data = array(
+			'data' => $dataquery,
+		);
+		$this->load->view('user/contact',$data);
 	}
 	public function daftar_blog()
 	{

@@ -9,7 +9,7 @@
 
 <body>
        <?php $this->load->view('user/include/header'); ?>
-    </header><!--/header-->
+    
 
 
     <div class="page-title" style="background-image: url(<?php echo base_url('asset/');?>images/page-title.png)">
@@ -22,38 +22,28 @@
                 <h2>Tanya Jawab</h2>
                 <p>Pertanyaan seputar GO-STAND</p>
             </div> 
-            <div class="row contact-wrap"> 
-                <div class="status alert alert-success" style="display: none"></div>
-                <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php">
-                    <div class="col-sm-5 col-sm-offset-1">
-                        <div class="form-group">
-                            <label>Nama *</label>
-                            <input type="text" name="name" class="form-control" required="required">
-                        </div>
-                        <div class="form-group">
-                            <label>Email *</label>
-                            <input type="email" name="email" class="form-control" required="required">
-                        </div>
-                        <div class="form-group">
-                            <label>No Telepon</label>
-                            <input type="number" class="form-control">
-                        </div>        
-                    </div>
-                    <div class="col-sm-5">
-                        <div class="form-group">
-                            <label>Subject *</label>
-                            <input type="text" name="subject" class="form-control" required="required">
-                        </div>
-                        <div class="form-group">
-                            <label>Pesan *</label>
-                            <textarea name="message" id="message" required="required" class="form-control" rows="8"></textarea>
-                        </div>                        
-                        <div class="form-group">
-                            <button type="submit" name="submit" class="btn btn-primary btn-lg" required="required">Kirim Pesan</button>
-                        </div>
-                    </div>
-                </form> 
-            </div><!--/.row-->
+            <div class="container-fluid ">
+    <div class="panel-group" id="faqAccordion">
+        <div class="panel panel-default ">
+            <?php foreach ($data as $faq) {?>
+            <div class="panel-heading accordion-toggle question-toggle collapsed" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question0">
+                 <h4 class="panel-title">
+                    <a href="#" class="ing"><?php echo ['quetion'];?></a>
+              </h4>
+
+            </div>
+            <div id="question0" class="panel-collapse collapse" style="height: 0px;">
+                <div class="panel-body">
+                     <h5><span class="label label-primary">Answer</span></h5>
+
+                    <p><?php echo ['answer'];?></p>
+                </div>
+            </div>
+            <?php }?>
+        </div>
+    </div>
+    <!--/panel-group-->
+</div>
         </div><!--/.container-->
     </section><!--/#contact-page-->
 
