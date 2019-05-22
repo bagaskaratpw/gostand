@@ -77,9 +77,15 @@
 														<?php echo $faq['answer'];?>
 													</td>
 													<td>
+													
 														<a href="<?php echo base_url('admin/delete_faq/').$faq['id'];?>">
 															<button type="button" class="mb-2 btn btn-sm btn-danger mr-1">
 																<i class="fa fa-trash" aria-hidden="true"></i>
+															</button> 
+														</a>
+														<a href="<?php echo base_url('admin/edit_faq/').$faq['id'];?>">
+															<button type="button" class="mb-2 btn btn-sm btn-danger mr-1">
+																<i class="fa fa-edit" aria-hidden="true"></i>
 															</button> 
 														</a>
 													</td>

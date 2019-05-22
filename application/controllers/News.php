@@ -25,12 +25,8 @@ class News extends CI_Controller
     
     // Create News
     public function createNews()
-    {
-        $data = $this->News_model->listCategory();
-        $data = array(
-                'category' => $data
-                ); 
-        $this->load->view('admin/create_news',$data);	
+    { 
+        $this->load->view('admin/create_news');	
     } 
     
 	public function creatingNews()
@@ -44,11 +40,7 @@ class News extends CI_Controller
 
         if($this->form_validation->run() == FALSE)
         {
-            $data = $this->News_model->listCategory();
-        	$data = array(
-                'category' => $data
-                ); 
-        	$this->load->view('admin/list_news',$data);
+        	$this->load->view('admin/list_news');
         }
         else
         {

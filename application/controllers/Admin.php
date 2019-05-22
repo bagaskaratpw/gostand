@@ -8,6 +8,7 @@ class Admin extends CI_Controller
 	{
 		parent::__construct();
 		$this->load->model('Admin_model');
+		$this->load->model('Dashboard_model');
 
 		if($this->session->userdata('status') != "ADMIN")
 		{
@@ -15,7 +16,17 @@ class Admin extends CI_Controller
 		}
 	}
 	public function index(){
-		$this->load->view('admin/dashboard');
+		$user = $this->Dashboard_model->totalPost()->num_rows();
+		$post = $this->Dashboard_model->totalPost()->num_rows();
+		$faq = $this->Dashboard_model->totalFaq()->num_rows();
+
+		$data = array(
+			'news'      => $news,
+			'account'      => $account,
+			'post'  => $post,
+			'faq'   => $faq
+			);
+		$this->load->view('admin/dashboard', $data);   
 	}
 	public function faq()
 	{
@@ -72,7 +83,29 @@ class Admin extends CI_Controller
 		$this->Admin_model->Delete('faq',$id);
 		redirect('admin/faq');
 	}
-	
-	
+	public function edit_faq($id)
+	{
+		$faq = $this->Admin_model->getWhere('faq', array('id' => $id));
+		$data = array(
+			'id' => $faq[0]['id'],
+			'quetion' => $faq[0]['quetion'],
+			'answer' => $faq[0]['answer']
+		);
+		$this->load->view('admin/edit_faq',$data);
+	}
+	public function prosesedit_faq()
+	{
+		$data = array(
+			'quetion' => $this->input->post('tanya'),
+			'answer' => $this->input->post('jawab')
+		);
+		$where = array(
+			'id' => $this->input->post('id')
+		);
+		$res = $this->Admin_model->Update('faq',$data, $where);
+		if ($res>0){
+			redirect('admin/faq');
+		}
+	}
 	
 }

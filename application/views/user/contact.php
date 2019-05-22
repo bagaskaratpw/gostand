@@ -24,23 +24,24 @@
             </div> 
             <div class="container-fluid ">
     <div class="panel-group" id="faqAccordion">
+        <?php
+        $no=1; 
+        foreach ($data as $faq) {
+        ?>
         <div class="panel panel-default ">
-            <?php foreach ($data as $faq) {?>
-            <div class="panel-heading accordion-toggle question-toggle collapsed" data-toggle="collapse" data-parent="#faqAccordion" data-target="#question0">
+            <div class="panel-heading accordion-toggle question-toggle collapsed" data-toggle="collapse" data-parent="#faqAccordion" data-target="#answer<?php echo $no; ?>">
                  <h4 class="panel-title">
-                    <a href="#" class="ing"><?php echo ['quetion'];?></a>
+                    <a href="#" class="ing"><?php echo $faq['quetion'];?></a>
               </h4>
-
             </div>
-            <div id="question0" class="panel-collapse collapse" style="height: 0px;">
+            <div id="answer<?php echo $no; ?>" class="panel-collapse collapse" style="height: 0px;">
                 <div class="panel-body">
                      <h5><span class="label label-primary">Answer</span></h5>
-
-                    <p><?php echo ['answer'];?></p>
+                    <p><?php echo $faq['answer'];?></p>
                 </div>
             </div>
-            <?php }?>
         </div>
+        <?php $no++; } ?>
     </div>
     <!--/panel-group-->
 </div>

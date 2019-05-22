@@ -11,20 +11,9 @@ class News_model extends CI_Model {
     // List News
     public function listNews()
     {
-        $this->db->select('news.news_id, news.news_unique, news.news_thumb_name, news.news_title, account.account_name, category.category_name, news.news_date, news.news_status');
-        $this->db->from('news');
-        $this->db->join('account', 'account.account_unique = news.news_author');
-        $this->db->join('category', 'category.category_unique = news.news_category');        
-        $this->db->order_by('news_id', 'DESC');        
-        return $res = $this->db->get()->result_array();
-    }
-
-    //Category
-    public function listCategory()
-    {
         $this->db->select('*');
-        $this->db->from('category');        
-        $this->db->where('category_status', 1);
+        $this->db->from('news');       
+        $this->db->order_by('news_id', 'DESC');        
         return $res = $this->db->get()->result_array();
     }
 
@@ -43,8 +32,6 @@ class News_model extends CI_Model {
             'news_title' 	    => $this->input->post('title'),
             'news_slug'         => $slug,
             'news_content'      => $this->input->post('content'),
-            'news_author'       => $this->session->userdata['unique'],
-            'news_category'     => $this->input->post('category'),
 			'news_date' 	    => date('Y-m-d'),
             'news_time'         => date('H:i:s'),            
             'news_status' 	    => 1                        

@@ -32,4 +32,8 @@ class Admin_model extends CI_Model
   public function cek_login($table, $where){
     return $this->db->get_where($table,$where);
   }
+  public function Update($table, $data, $where){
+    $data = $this->db->update($table, $data, $where);
+    return $data;
+  }
 }
