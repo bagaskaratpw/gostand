@@ -18,10 +18,12 @@
 					<nav class="navbar align-items-stretch navbar-light flex-md-nowrap p-0">
 						<form action="#" class="main-navbar__search w-100 d-none d-md-flex d-lg-flex">
 							<div class="input-group input-group-seamless ml-3">
-								<div class="input-group-prepend">
-										
-								</div>
+								
+							</div>
 						</form>
+						<a class="nav-link nav-link-icon text-center" href="<?php echo base_url('login/logout');?>" role="button">
+							<i class="material-icons">&#xE879;</i>
+						</a>
 						<nav class="nav">
 							<a href="#" class="nav-link nav-link-icon toggle-sidebar d-md-inline d-lg-none text-center border-left"
 								data-toggle="collapse" data-target=".header-navbar" aria-expanded="false" aria-controls="header-navbar">
@@ -48,7 +50,7 @@
 								<div class="d-flex flex-column m-auto">
 								<div class="stats-small__data text-center">
 									<span class="stats-small__label text-uppercase">Posts</span>
-									<h6 class="stats-small__value count my-3">2,390</h6>
+									<h6 class="stats-small__value count my-3" data-from="0" data-to="<?php echo $news; ?>"><?php echo $news; ?></h6>
 								</div>
 								
 								</div>
@@ -61,8 +63,8 @@
 							<div class="card-body p-0 d-flex">
 								<div class="d-flex flex-column m-auto">
 								<div class="stats-small__data text-center">
-									<span class="stats-small__label text-uppercase">Pages</span>
-									<h6 class="stats-small__value count my-3">182</h6>
+									<span class="stats-small__label text-uppercase">Account</span>
+									<h6 class="stats-small__value count my-3" data-from="0" data-to="<?php echo $account;?>"><?php echo $account; ?></h6>
 								</div>
 								
 								</div>
@@ -75,37 +77,11 @@
 								<div class="card-body p-0 d-flex">
 									<div class="d-flex flex-column m-auto">
 										<div class="stats-small__data text-center">
-											<span class="stats-small__label text-uppercase">Comments</span>
-											<h6 class="stats-small__value count my-3">8,147</h6>
+											<span class="stats-small__label text-uppercase">FAQ</span>
+											<h6 class="stats-small__value count my-3" data-from="0" data-to="<?php echo $faq;?>">8,147</h6>
 										</div>
 									</div>
 									<canvas height="120" class="blog-overview-stats-small-3"></canvas>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg col-md-4 col-sm-6 mb-4">
-							<div class="stats-small stats-small--1 card card-small">
-								<div class="card-body p-0 d-flex">
-									<div class="d-flex flex-column m-auto">
-										<div class="stats-small__data text-center">
-											<span class="stats-small__label text-uppercase">Users</span>
-											<h6 class="stats-small__value count my-3">2,413</h6>
-										</div>
-									</div>
-									<canvas height="120" class="blog-overview-stats-small-4"></canvas>
-								</div>
-							</div>
-						</div>
-						<div class="col-lg col-md-4 col-sm-12 mb-4">
-							<div class="stats-small stats-small--1 card card-small">
-								<div class="card-body p-0 d-flex">
-									<div class="d-flex flex-column m-auto">
-										<div class="stats-small__data text-center">
-											<span class="stats-small__label text-uppercase">Subscribers</span>
-											<h6 class="stats-small__value count my-3">17,281</h6>
-										</div>
-									</div>
-									<canvas height="120" class="blog-overview-stats-small-5"></canvas>
 								</div>
 							</div>
 						</div>

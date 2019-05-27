@@ -18,10 +18,12 @@
 					<nav class="navbar align-items-stretch navbar-light flex-md-nowrap p-0">
 						<form action="#" class="main-navbar__search w-100 d-none d-md-flex d-lg-flex">
 							<div class="input-group input-group-seamless ml-3">
-								<div class="input-group-prepend">
-										
-								</div>
+								
+							</div>
 						</form>
+						<a class="nav-link nav-link-icon text-center" href="<?php echo base_url('login/logout');?>" role="button">
+							<i class="material-icons">&#xE879;</i>
+						</a>
 						<nav class="nav">
 							<a href="#" class="nav-link nav-link-icon toggle-sidebar d-md-inline d-lg-none text-center border-left"
 								data-toggle="collapse" data-target=".header-navbar" aria-expanded="false" aria-controls="header-navbar">
@@ -66,7 +68,23 @@
 												</tr>
 											</thead>
 											<tbody>
-		 										
+											<?php $no=1; foreach($news as $post) {?>
+		 										<tr>
+													<td>
+														<?php echo $no++?>
+													</td>
+													<td>
+														<?php echo $post['news_title'];?>
+													</td>
+													<td>
+														<?php echo $post['news_content'];?>
+													</td>
+													<td>
+													
+														
+													</td>
+												</tr>
+												 <?php }?>
 											</tbody>
 										</table>
 									</div>

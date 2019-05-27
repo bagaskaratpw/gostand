@@ -44,7 +44,7 @@
                 <div class="col-md-4 col-sm-6 single-team">
                     <div class="inner">
                         <div class="team-img">
-                            <img src="<?php echo base_url('asset/');?>images/bugi.jpg" alt="">
+                            <img src="<?php echo base_url('asset/');?>images/bugi.jpg" height="400" width="400" alt="">
                         </div>
                         <div class="team-content">
                             <h4>Bugi Setiawan</h4>
@@ -61,7 +61,7 @@
                 <div class="col-md-4 col-sm-6 single-team">
                     <div class="inner">
                         <div class="team-img">
-                            <img src="<?php echo base_url('asset/');?>images/ino.jpg" alt="">
+                            <img src="<?php echo base_url('asset/');?>images/ino.jpg" height="400" width="400" alt="">
                         </div>
                         <div class="team-content">
                             <h4>Januario Tristano</h4>
@@ -78,7 +78,7 @@
                 <div class="col-md-4 col-sm-6 single-team">
                     <div class="inner">
                         <div class="team-img">
-                            <img src="<?php echo base_url('asset/');?>images/bagas.jpg" alt="">
+                            <img src="<?php echo base_url('asset/');?>images/bagas.jpg" height="400" width="400" alt="">
                         </div>
                         <div class="team-content">
                             <h4>Bagaskara Teguh</h4>
@@ -95,7 +95,7 @@
                 <div class="col-md-4 col-sm-6 single-team">
                     <div class="inner">
                         <div class="team-img">
-                            <img src="<?php echo base_url('asset/');?>images/debby.jpg" alt="">
+                            <img src="<?php echo base_url('asset/');?>images/debby.jpg"  height="400" width="400" alt="">
                         </div>
                         <div class="team-content">
                             <h4>Natalia Debby</h4>
@@ -112,7 +112,7 @@
                 <div class="col-md-4 col-sm-6 single-team">
                     <div class="inner">
                         <div class="team-img">
-                            <img src="<?php echo base_url('asset/');?>images/siki.jpg" alt="">
+                            <img src="<?php echo base_url('asset/');?>images/siki.jpg"  height="400" width="400" alt="">
                         </div>
                         <div class="team-content">
                             <h4>Rizkia Herliani</h4>
@@ -129,7 +129,7 @@
                 <div class="col-md-4 col-sm-6 single-team">
                     <div class="inner">
                         <div class="team-img">
-                            <img src="<?php echo base_url('asset/');?>images/yefta.jpg" alt="">
+                            <img src="<?php echo base_url('asset/');?>images/yefta.jpg"  height="400" width="400" alt="">
                         </div>
                         <div class="team-content">
                             <h4>Yefta Juntinus</h4>

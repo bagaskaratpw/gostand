@@ -16,14 +16,13 @@ class Admin extends CI_Controller
 		}
 	}
 	public function index(){
-		$user = $this->Dashboard_model->totalPost()->num_rows();
-		$post = $this->Dashboard_model->totalPost()->num_rows();
+		$account = $this->Dashboard_model->totalUser()->num_rows();
+		$news = $this->Dashboard_model->totalPost()->num_rows();
 		$faq = $this->Dashboard_model->totalFaq()->num_rows();
 
 		$data = array(
 			'news'      => $news,
 			'account'      => $account,
-			'post'  => $post,
 			'faq'   => $faq
 			);
 		$this->load->view('admin/dashboard', $data);   
@@ -57,7 +56,7 @@ class Admin extends CI_Controller
 		);
 
 		$data = $this->Admin_model->Insert('account',$data);
-		redirect(base_url('admin/index'));
+		redirect(base_url('admin/userlist'));
 	}
 	public function prosesfaq()
 	{
