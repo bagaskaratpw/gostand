@@ -59,29 +59,53 @@
 										<table class="table table-bordered table-striped table-hover dataTable js-exportable">
 											<thead>
 												<tr>
-                                                    <th width="10">No</th>
-                                                    <th>Title</th>                                    
-                                                    <th style="text-align:center;" width="100">Category</th>
-                                                    <th style="text-align:center;" width="150">Publish</th>                                    
-                                                    <th style="text-align:center;" width="150">Status</th>
-                                                    <th style="text-align:center;" width="150">Action</th>
+                                                    <th style="text-align:center;"  width="10">No</th>
+                                                    <th style="text-align:center;" width="180">Title</th>                                    
+                                                    <th style="text-align:center;" width="100">Publish</th>
+													<th style="text-align:center;" width="100">Status</th>                                    
+                                                    <th style="text-align:center;" width="80">Action</th>
 												</tr>
 											</thead>
 											<tbody>
 											<?php $no=1; foreach($news as $post) {?>
 		 										<tr>
-													<td>
+													<td style="text-align:center;" >
 														<?php echo $no++?>
 													</td>
 													<td>
 														<?php echo $post['news_title'];?>
 													</td>
-													<td>
-														<?php echo $post['news_content'];?>
+													<td style="text-align:center;">
+														<?php echo $post['news_date'];?>
+													</td>
+													
+													<td style="text-align:center;">
+													<?php
+														if($post['news_status'] == 1)
+														{
+															echo '<a class="mb-2 btn btn-primary mr-2" href="'.base_url('news/active/').$post['news_unique'].'">Active</a>';
+															echo ' ';
+															echo '<a class="mb-2 btn btn-outline-danger mr-2" href="'.base_url('news/nonactive/').$post['news_unique'].'">Non Active</a>';
+														}
+														else if($post['news_status'] == 2)
+														{
+															echo '<a class="mb-2 btn btn-outline-primary mr-2" href="'.base_url('news/active/').$post['news_unique'].'">Active</a>';
+															echo ' ';
+															echo '<a class="mb-2 btn btn-danger mr-2" href="'.base_url('news/nonactive/').$post['news_unique'].'">Non Active</a>';
+														}                                       
+														?>
 													</td>
 													<td>
-													
-														
+														<a href="<?php echo base_url('news/deletingNews/').$post['news_unique'];?>">
+															<button type="button" class="mb-2 btn btn-outline-danger mr-2">
+																<i class="fa fa-trash" aria-hidden="true"></i>
+															</button> 
+														</a>
+														<a href="<?php echo base_url('news/editNews/').$post['news_unique'];?>">
+															<button type="button" class="mb-2 btn btn-outline-warning mr-2">
+																<i class="fa fa-edit" aria-hidden="true"></i>
+															</button> 
+														</a>
 													</td>
 												</tr>
 												 <?php }?>

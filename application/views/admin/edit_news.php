@@ -47,10 +47,17 @@
                             <!-- Add New Post Form -->
                             <div class="card card-small mb-3">
                                 <div class="card-body">
-								<?php echo form_open_multipart('news/creatingNews', array('class' => 'form-horizontal', 'autocomplete' => 'off')); ?>
+								<?php echo form_open_multipart('news/editingNews', array('class' => 'form-horizontal', 'autocomplete' => 'off')); ?>
 									<div class="form-group">
 										<div class="form-line">
-                                            <input type="text" class="form-control" name="tittle" id="tittle" value="<?php echo $tittle;?>">
+										<?php 
+											$data = array('type' => 'hidden', 'class' => 'form-control', 'name' => 'unique', 'id' => 'unique', 'value' => $news['news_unique']); 
+											echo form_input($data);                                             
+											?>
+											<?php 
+                                            	$data = array('type' => 'text', 'class' => 'form-control','placeholder' => 'News Title', 'name' => 'title', 'id' => 'title', 'value' => $news['news_title'], 'required' => 'true', 'autofocus' => 'true'); 
+                                             	echo form_input($data);                                             
+                                             ?>
 										</div>
 									</div>
 									<div class="form-group">
@@ -60,7 +67,7 @@
 									</div>
 									<div class="form-group">
 										<div class="form-line">
-											<textarea name="content" class="ckeditor" id="ckedtor"></textarea>
+											<textarea name="content" class="ckeditor" id="ckedtor"><?php echo $news['news_content'];?></textarea>
 										</div>
 									</div>
                                     <?php echo form_submit('submit', 'CREATE', array('class' => 'btn btn-success m-t-10 waves-effect')); ?>

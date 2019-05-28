@@ -148,12 +148,10 @@ class News extends CI_Controller
 	public function editNews($unique)
     {
 		$data1 = $this->News_model->detailNews($unique);
-        $data2 = $this->News_model->listCategory();
-        $data3 = array(
+        $data2 = array(
 				'news' => $data1,
-				'category' => $data2
                 ); 
-        $this->load->view('news/edit_news',$data3);	
+        $this->load->view('admin/edit_news',$data2);	
 	}
 
 	public function editingNews()
@@ -169,12 +167,10 @@ class News extends CI_Controller
         if($this->form_validation->run() == FALSE)
         {
             $data1 = $this->News_model->detailNews($unique);
-            $data2 = $this->News_model->listCategory();
-            $data3 = array(
+            $data2 = array(
 				'news' => $data1,
-				'category' => $data2
                 ); 
-            $this->load->view('news/edit_news',$data3);	
+            $this->load->view('news/edit_news',$data2);	
         }
         else
         {

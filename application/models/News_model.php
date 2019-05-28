@@ -64,8 +64,7 @@ class News_model extends CI_Model {
         $data = array(            
             'news_title' 	    => $this->input->post('title'),
             'news_slug'         => $slug,
-            'news_content'      => $this->input->post('content'),            
-            'news_category'     => $this->input->post('category'),			
+            'news_content'      => $this->input->post('content'),           	
             );        
         
 		$this->db->where('news_unique', $unique);
@@ -83,7 +82,6 @@ class News_model extends CI_Model {
             'news_title' 	    => $this->input->post('title'),
             'news_slug'         => $slug,
             'news_content'      => $this->input->post('content'),            
-            'news_category'     => $this->input->post('category'),			
             );        
         
 		$this->db->where('news_unique', $unique);
