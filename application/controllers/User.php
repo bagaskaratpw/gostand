@@ -23,10 +23,19 @@ class User extends CI_Controller {
 		);
 		$this->load->view('user/contact',$data);
 	}
+
 	public function daftar_blog()
 	{
-		$this->load->view('user/daftar_blog');
+		$news=$this->Admin_model->get('news');
+		$faq=$this->Admin_model->get('faq');
+
+		$data=array(
+			'news'=>$news
+		);
+
+		$this->load->view('user/daftar_blog',$data);
 	}
+	
 	public function blog()
 	{
 		$this->load->view('user/blog');
