@@ -140,8 +140,8 @@ class News extends CI_Controller
 		$data = $this->News_model->detailNews($unique);        
         $data = array(
 				'news' => $data,				
-                ); 
-        $this->load->view('news/detail_news',$data);	
+                ); 	
+        $this->load->view('admin/detail_news',$data);
     } 
 
 	// Edit News
@@ -152,6 +152,7 @@ class News extends CI_Controller
 				'news' => $data1,
                 ); 
         $this->load->view('admin/edit_news',$data2);	
+
 	}
 
 	public function editingNews()
@@ -254,5 +255,5 @@ class News extends CI_Controller
             $this->session->set_flashdata('error', 'Sorry, failed to delete news');
 		    redirect(base_url('news'));
         }		
-	}
+    }
 }
