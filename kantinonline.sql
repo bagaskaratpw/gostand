@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 27 Bulan Mei 2019 pada 06.07
+-- Waktu pembuatan: 14 Jun 2019 pada 06.33
 -- Versi server: 10.1.39-MariaDB
 -- Versi PHP: 7.2.18
 
@@ -108,8 +108,8 @@ CREATE TABLE `news` (
 --
 
 INSERT INTO `news` (`news_id`, `news_unique`, `news_thumb_name`, `news_thumb_size`, `news_thumb_type`, `news_title`, `news_slug`, `news_content`, `news_date`, `news_time`, `news_status`) VALUES
-(1, '37d3c4210d70b087cd10feb15b5818d2', '7646b7ea00d4911822d02fc5c2238cd9.jpeg', 104.32, 'image/jpeg', 'bugi', 'bugi', '', '2019-05-22', '13:50:03', '1'),
-(2, '2dc3198488636e64c087f92039212d33', '63ca72973906d10131c078775b6573e2.jpeg', 86.63, 'image/jpeg', 'asd', 'asd', '<p>asdd</p>', '2019-05-22', '13:52:05', '1');
+(5, 'c36fb1e70fbbe17f153e4c5d5f9e3833', 'ffd74e84493b4d91c56346b71b9a373e.jpg', 28.37, 'image/jpeg', 'testtest', 'testtest', '<p>cekcek1..2..3..</p>', '2019-05-28', '22:22:45', '1'),
+(6, 'e5f16d3d43863856672edd31b371236c', '33cfe89b0b43bb8086acd4531282012b.jpg', 28.37, 'image/jpeg', 'Es Legendaris untuk Hilangkan Hausmu', 'es-legendaris-untuk-hilangkan-hausmu', '<p>Es menjadi solusi saat kita merasa haus. Selain menyegarkan es juga memiliki rasa yang manis dan beragam macamnya. Nah berikut Madhang punya 4 ulasana minuman menyegarkan yang khas dari Indonesia.</p><p><strong>1. &nbsp; &nbsp; &nbsp;Es Doger</strong></p><p>Es khas Indonesia ini sebenarnya berasal dari Cirebon. Terbuat dari susu, kelapa muda dan sirup yang dicampur dengan es yang teah diserut. Karena memakai bahan tersebut sehingga menimbulkan warna pink yang menjadi ciri khas. Kemudian untuk isian es terdapat pacar cina/sagu, tape, cincau hitam dan terkadang terdapat alpukat. Nama es doger sendiri ternyata diambil dari singkatan Dorong Gerobak, mengingat penjual menjajakannya dengan gerobak.</p><p><strong>2. &nbsp; &nbsp; &nbsp;Es Dawet</strong></p><p>Es dawet merupakan minuman yang berasal dari tanah jawa. Es dawet dan es cendol sering dianggap sama. Padahal berbeda, es cendol terbuat dari tepung hunkwe, sedangkan es dawet terbuat dari tepung beras atau tepung beras ketan. Keduanya sama-sama disajikan dengan kuah santan yang diberi sedikit sirup gula merah, tidak lupa dengan es batunya.</p><p><strong>3. &nbsp; &nbsp; &nbsp;Es Selendang Mayang</strong></p><p>Berasal dari Betawi, namun banyak ditemui di daerah lain. Hampir mirip dengan cendol, namun selendang mayang berbentuk seperi kue lapis. Sebelum dipotong kotak seperti lapis, adonan yang terbuat dari tepung hunkwe di susun tiap warna awalnya di letakkan dalam loyang lapis demi lapis. Setelah mengeras, baru dapat dipotong untuk kemudian diriram kuah sntan dan sirup gula jawa. Ciri khas dari selendang mayang ini adalah kuenya berwarna merah, putih, dan hijau.</p><p><strong>4. &nbsp; &nbsp; &nbsp;Es Oyen</strong></p><p>Sekilas es oyen mirip dengan es teler, tapi ternyata berbeda. Jika es teler berisi hanya buah-buahan saja, es oyen tidak hanya berisi buah-buahan namun juga pacar cina/sagu. Selain itu es oyen memiliki campuran sirup coco pandan, sedangkan es teler tidak memakai sirup. (DRA)</p>', '2019-06-10', '20:57:56', '1');
 
 --
 -- Indexes for dumped tables
@@ -166,7 +166,7 @@ ALTER TABLE `faq`
 -- AUTO_INCREMENT untuk tabel `news`
 --
 ALTER TABLE `news`
-  MODIFY `news_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `news_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
