@@ -37,7 +37,7 @@
                                     echo substr($text, 0, $num_char) . '...';
                                 ?>
                                 </h3>
-                                <a class="readmore" href="<?php echo base_url('user/blog');?>">Read More <i class="fa fa-long-arrow-right"></i></a>
+                                <a class="readmore" href="<?php echo base_url('user/blog/').$news['news_slug'];?>">Read More <i class="fa fa-long-arrow-right"></i></a>
                             </div>
                         </div>
                         <!--/.blog-item-->

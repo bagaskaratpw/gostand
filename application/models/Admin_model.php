@@ -36,4 +36,12 @@ class Admin_model extends CI_Model
     $data = $this->db->update($table, $data, $where);
     return $data;
   }
+  // Detail News
+  public function detailNews($unique)
+	{
+		$this->db->select('*');
+		$this->db->from('news');
+		$this->db->where('news_slug', $unique);
+		return $this->db->get()->row_array();		
+    }
 }

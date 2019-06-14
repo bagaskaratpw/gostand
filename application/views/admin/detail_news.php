@@ -9,7 +9,7 @@
     <body class="h-100">
         <div class="container-fluid">
             <div class="row">
-                <?php $this->load->view('admin/include/sidebar_account');?>
+                <?php $this->load->view('admin/include/sidebar_news');?>
                 <main class="main-content col-lg-10 col-md-9 col-sm-12 p-0 offset-lg-2 offset-md-3">
                     <div class="main-navbar sticky-top bg-white">
                         <!-- Main Navbar -->
@@ -33,7 +33,7 @@
                         <div class="main-content-container container-fluid px-4">
                             <!-- Page Header -->
                             <div class="page-header row no-gutters py-4">
-                                <div class="col-12 col-sm-4 text-center text-sm-left mb-0">
+                                <div class="col-12 text-center text-sm-left mb-0">
                                     <span class="text-uppercase page-subtitle">Blog Posts</span>
                                     <h3 class="page-title"><?php echo $news['news_title']; ?></h3>
                                 </div>
@@ -44,6 +44,8 @@
                                     <!-- Add New Post Form -->
                                     <div class="card card-small mb-3">
                                         <div class="card-body">
+											<img width="100%" src="<?php echo base_url('asset/images/news/').$news['news_thumb_name']; ?>" alt="gambar">
+											<br>
                                             <?php echo $news['news_content']; ?>
                                         </div>
                                     </div>

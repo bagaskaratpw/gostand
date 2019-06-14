@@ -36,8 +36,12 @@ class User extends CI_Controller {
 		$this->load->view('user/daftar_blog',$data);
 	}
 	
-	public function blog()
+	public function blog($unique)
 	{
-		$this->load->view('user/blog');
+		$data = $this->Admin_model->detailNews($unique);        
+        $data = array(
+				'news' => $data,				
+				);
+		$this->load->view('user/blog',$data);
 	}
 }
