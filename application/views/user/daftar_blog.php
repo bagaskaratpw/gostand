@@ -28,7 +28,7 @@
                             <a href="#"><img class="img-responsive img-blog" src="<?php echo base_url('asset/images/news/').$news['news_thumb_name'];?>" width="100%" alt="" /></a>
                             <div class="blog-content">
                                 
-                                <h2><a href="blog-item.html"><?php echo $news['news_title']; ?></a></h2>
+                                <h2><a href="<?php echo base_url('user/blog/').$news['news_slug'];?>"><?php echo $news['news_title']; ?></a></h2>
                                 <!-- <h3><?php echo $news['news_content']; ?></h3> -->
                                 <h3>
                                 <?php
