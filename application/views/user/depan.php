@@ -345,8 +345,8 @@
     <section id="partner">
         <div class="container">
             <div class="center fadeInDown">
-                <h2>Our Partners</h2>
-                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+                <h2>Our Sponsor</h2>
+                <p class="lead">Kami tidak sendiri.<br> Ada banyak yang membantu berjalannya aplikasi ini.</p>
             </div>
 
             <div class="partners">
