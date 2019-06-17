@@ -119,8 +119,8 @@
 							<a class="nav-link" href="#">Blog</a>
 						</li>
 					</ul>
-					<span class="copyright ml-auto my-auto mr-2">Copyright © 2018
-						<a href="https://designrevision.com" rel="nofollow">DesignRevision</a>
+					<span class="copyright ml-auto my-auto mr-2">Copyright © 2019
+						<a href="https://designrevision.com" rel="nofollow">GO STAND</a>
 					</span>
 				</footer>
 			</main>
