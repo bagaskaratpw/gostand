@@ -78,7 +78,7 @@
 									<div class="d-flex flex-column m-auto">
 										<div class="stats-small__data text-center">
 											<span class="stats-small__label text-uppercase">FAQ</span>
-											<h6 class="stats-small__value count my-3" data-from="0" data-to="<?php echo $faq;?>">8,147</h6>
+											<h6 class="stats-small__value count my-3" data-from="0" data-to="<?php echo $faq;?>"><?php echo $faq; ?></h6>
 										</div>
 									</div>
 									<canvas height="120" class="blog-overview-stats-small-3"></canvas>
